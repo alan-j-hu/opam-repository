@@ -1,0 +1,45 @@
+opam-version: "2.0"
+synopsis:
+  "Reading and writing of plist files in the XML format in pure OCaml"
+description: """
+Reading and writing of plist files in the XML format in pure OCaml.
+
+Implementation of https://www.apple.com/DTDs/PropertyList-1.0.dtd."""
+maintainer: ["Alan Hu <hu.ala@northeastern.edu>"]
+authors: ["Alan Hu <hu.ala@northeastern.edu>"]
+license: "MIT"
+homepage: "https://github.com/dosaylazy/ocaml-plist-xml"
+doc: "https://dosaylazy.github.io/ocaml-plist-xml/"
+bug-reports: "https://github.com/dosaylazy/ocaml-plist-xml/issues"
+depends: [
+  "dune" {>= "2.6"}
+  "base64" {>= "3.4" & < "4.0"}
+  "ISO8601" {>= "0.2.6" & < "1.0"}
+  "markup" {>= "0.8" & < "0.9"}
+  "ocaml" {>= "4.08"}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {pinned}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/dosaylazy/ocaml-plist-xml.git"
+x-commit-hash: "630b465361a92d1d2deffa166e21ab8cfbf7a56d"
+url {
+  src:
+    "https://github.com/dosaylazy/ocaml-plist-xml/releases/download/630b465/plist-xml-lwt-630b465.tbz"
+  checksum: [
+    "sha256=a24ed0f96f5d39b8a168d1c6fd6cabdafaeb31c87175d8df392b590ac243694b"
+    "sha512=f0fd9932cc8e69329bccb212c24fb90f2b612d5c83f350d9e35c0125aa8079c1b01246b5e35f070d435feb4cc0647a18e401eb9cb5457ac5f53f5a7be40edb92"
+  ]
+}
