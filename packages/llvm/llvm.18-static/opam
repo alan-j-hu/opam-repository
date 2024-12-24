@@ -22,9 +22,6 @@ depends: [
   "conf-llvm-static" {build & = "18"}
   "conf-cmake" {build}
 ]
-patches: [
-  "fix-shared.patch"
-]
 synopsis: "The OCaml bindings distributed with LLVM"
 description: "Note: LLVM should be installed first."
 url {
