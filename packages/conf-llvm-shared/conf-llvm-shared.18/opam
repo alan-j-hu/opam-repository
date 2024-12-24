@@ -28,7 +28,7 @@ extra-source "configure.sh" {
   src:
     "/home/alan/conf-llvm-static-shared/configure.sh.18"
   checksum: [
-    "sha256=1bf3de2555aaadd5c2921232603a59315fab4f23caa30f8d3ed4dcb1be99d0e1"
-    "md5=dc83d5f7f7cd546764df88ab53fa67d3"
+    "sha256=13b22f406b6aa4be03cf5c70a55a8513bdb9bd804877a99c66d79cf0d6b2fbd2"
+    "md5=a64daab3f3768dd671fcd046bd2c1a04"
   ]
 }
