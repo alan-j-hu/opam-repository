@@ -25,18 +25,18 @@ depends: [
 synopsis: "The OCaml bindings distributed with LLVM"
 description: "Note: LLVM should be installed first."
 url {
-  src: "https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.8/llvm-18.1.8.src.tar.xz"
+  src: "https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.8/llvm-project-18.1.8.src.tar.xz"
   checksum: [
-    "sha256=f68cf90f369bc7d0158ba70d860b0cb34dbc163d6ff0ebc6cfa5e515b9b2e28d"
-    "md5=54e694dea8ba19db4a07d14507008e0b"
+    "sha256=0b58557a6d32ceee97c8d533a59b9212d87e0fc4d2833924eb6c611247db2f2a"
+    "md5=81cd0be5ae6f1ad8961746116d426a96"
   ]
 }
 extra-source "install.sh" {
   src:
     "/home/alan/conf-llvm-static-shared/install.sh.18"
   checksum: [
-    "sha256=f383bbfa811ae3c5f9bd90f08752679aa55f559829d89ff0b550d5f5040927c3"
-    "md5=604f5ab4b32ff8018ff4d17d21710272"
+    "sha256=d718ca99855fe302608aa29c40634408fbab27eed39015b64cd43902512e312b"
+    "md5=6c04724303f3a945fa1b65135765ec6f"
   ]
 }
 
