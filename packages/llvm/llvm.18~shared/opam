@@ -1,0 +1,46 @@
+opam-version: "2.0"
+maintainer: "Kate <kit.ty.kate@disroot.org>"
+authors: [
+  "whitequark <whitequark@whitequark.org>"
+  "The LLVM team"
+]
+license: "MIT"
+bug-reports: "http://llvm.org/bugs/"
+dev-repo: "git+http://llvm.org/git/llvm.git"
+doc: "http://llvm.org"
+homepage: "http://llvm.org"
+build: [
+  ["bash" "-ex" "install.sh" "%{conf-llvm-shared:config}%" lib "%{conf-cmake:cmd}%" make "build" "shared"]
+]
+install: [
+  ["bash" "-ex" "install.sh" "%{conf-llvm-shared:config}%" lib "%{conf-cmake:cmd}%" make "install" "shared"]
+]
+depends: [
+  "ocaml" {>= "4.00.0"}
+  "ctypes" {>= "0.4"}
+  "ocamlfind" {build}
+  "conf-llvm-static" {build & = version}
+  "conf-python-2-7" {build}
+  "conf-cmake" {build}
+]
+patches: [
+  "fix-shared.patch"
+]
+synopsis: "The OCaml bindings distributed with LLVM"
+description: "Note: LLVM should be installed first."
+url {
+  src: "https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.8/llvm-18.1.8.src.tar.xz"
+  checksum: [
+    "sha256=f68cf90f369bc7d0158ba70d860b0cb34dbc163d6ff0ebc6cfa5e515b9b2e28d"
+    "md5=54e694dea8ba19db4a07d14507008e0b"
+  ]
+}
+extra-source "install.sh" {
+  src:
+    "/home/alan/conf-llvm-static-shared/install.sh.18"
+  checksum: [
+    "sha256=50c275e4bfe6e2bb15399a60cf43dbc9d01d7c6fadaedfa15b92b9b6174b6d4f"
+    "md5=ac33a2daa587a9e27022810ca9171fed"
+  ]
+}
+
