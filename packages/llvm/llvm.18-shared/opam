@@ -43,7 +43,7 @@ extra-source "AddOCaml.cmake.patch" {
   src:
     "/home/alan/conf-llvm-static-shared/AddOCaml.cmake.patch"
   checksum: [
-    "sha256=ae48731589c7569ed5a80a4ce1db4de986ee770ba21397cd9fb54981c94b1d1a"
-    "md5=d51dd042ed03799dfb1394539ddde624"
+    "sha256=7495075cf6c0b442e2b2e71349c2967f9a2c53ba619d1240c7f2911d32ae9404"
+    "md5=d9a836f7a493324e2dbd1650782f2757"
   ]
 }
