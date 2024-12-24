@@ -20,7 +20,6 @@ depends: [
   "ctypes" {>= "0.4"}
   "ocamlfind" {build}
   "conf-llvm-static" {build & = "18"}
-  "conf-python-2-7" {build}
   "conf-cmake" {build}
 ]
 patches: [
